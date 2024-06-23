@@ -7,7 +7,7 @@ metadata:
   version: "1.30"
  
 # AZ
-availabilityZones: ["ap-northeast-2a", "ap-northeast-2b",  "ap-northeast-2c"]
+availabilityZones: ["ap-northeast-2a", "ap-northeast-2c"]
  
 # IAM OIDC & Service Account
 iam:
@@ -33,7 +33,7 @@ iam:
 managedNodeGroups:
   # On-Demand Instance
   - name: production
-    instanceType: t2.medium
+    instanceType: t2.micro
     minSize: 1
     desiredCapacity: 2
     labels: { role: production }
@@ -42,7 +42,7 @@ managedNodeGroups:
     ssh:
       allow: true
       publicKeyPath: mykeypair
-    availabilityZones: ["ap-northeast-2a", "ap-northeast-2b", "ap-northeast-2c"]
+    availabilityZones: ["ap-northeast-2a", "ap-northeast-2c"]
     iam:
       withAddonPolicies:
         autoScaler: true
