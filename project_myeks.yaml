@@ -6,10 +6,8 @@ metadata:
   region: ap-northeast-2
   version: "1.30"
 
-# AZ
 availabilityZones: ["ap-northeast-2a", "ap-northeast-2c"]
 
-# IAM OIDC & Service Account
 iam:
   withOIDC: true
   serviceAccounts:
@@ -29,9 +27,7 @@ iam:
       wellKnownPolicies:
         autoScaler: true
 
-# Managed Node Groups
 managedNodeGroups:
-  # On-Demand Instance
   - name: production
     instanceType: t2.micro
     minSize: 1
