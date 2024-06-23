@@ -35,9 +35,9 @@ managedNodeGroups:
   - name: production
     instanceType: t2.micro
     minSize: 1
-    desiredCapacity: 2
+    desiredCapacity: 3
     labels: { role: production }
-    maxSize: 3
+    maxSize: 4
     privateNetworking: true
     ssh:
       allow: true
